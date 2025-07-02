@@ -3,6 +3,7 @@ import Link from "next/link";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import MobileMenu from "./mobile-menu";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -43,16 +44,29 @@ const Header = () => {
               investor relation
             </Link>
           </nav>
-          <button className="hidden group bg-[#006466] h-[2.4375rem] w-[8.5rem] md:flex items-center gap-1 justify-center text-white capitalize rounded-4xl cursor-pointer">
+          <button
+            aria-label="get started"
+            className="hidden group bg-[#006466] h-[2.4375rem] w-[8.5rem] md:flex items-center gap-1 justify-center text-white capitalize rounded-4xl cursor-pointer"
+          >
             get started{" "}
             <IoIosArrowRoundForward
               className="group-hover:animate-pulse"
               size={24}
             />
           </button>
-          <button className="md:hidden">{showMenu ? <X /> : <Menu />}</button>
+          <button
+            onClick={() => {
+              console.log("button clicked");
+              toggleMenu();
+            }}
+            aria-label="menu button"
+            className="md:hidden"
+          >
+            {showMenu ? <X /> : <Menu />}
+          </button>
         </div>
       </header>
+      <MobileMenu showMenu={showMenu} handleMenu={toggleMenu} />
     </>
   );
 };
