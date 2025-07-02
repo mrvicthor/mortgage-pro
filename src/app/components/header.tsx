@@ -55,14 +55,15 @@ const Header = () => {
             />
           </button>
           <button
-            onClick={() => {
-              console.log("button clicked");
-              toggleMenu();
-            }}
+            onClick={toggleMenu}
             aria-label="menu button"
             className="md:hidden"
           >
-            {showMenu ? <X /> : <Menu />}
+            {showMenu ? (
+              <X className="text-[#006466]" />
+            ) : (
+              <Menu className="text-[#006466]" />
+            )}
           </button>
         </div>
       </header>
