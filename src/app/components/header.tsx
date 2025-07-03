@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <>
       <header className="sticky z-50 top-4 px-4">
-        <div className="container mx-auto flex backdrop-blur-sm items-center justify-between max-w-7xl py-4 px-4 bg-white rounded-4xl">
+        <div className="container mx-auto bg-white flex backdrop-blur-sm items-center justify-between max-w-7xl py-4 px-4 rounded-4xl">
           <Link
             href="/"
             className="text-[#006466] hover:text-gray-500  capitalize font-bold transition-colors"

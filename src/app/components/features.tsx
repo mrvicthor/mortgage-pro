@@ -1,23 +1,48 @@
+"use client";
 import Link from "next/link";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { motion } from "motion/react";
+import { container, item } from "@/utils";
 
 const Features = () => {
   return (
     <section className="py-20 px-4 bg-[#F1FFFF]">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-7xl">
         <div className="grid md:grid-cols-2">
-          <h3 className="text-[#006466] font-bold text-5xl uppercase">
+          <motion.h3
+            whileInView={{
+              x: [-50, 0],
+              opacity: [0, 1],
+            }}
+            viewport={{ once: true }}
+            className="text-[#006466] font-bold text-4xl lg:text-5xl uppercase"
+          >
             comprehensive mortgage solutions tailored for you
-          </h3>
-          <p className="text-[1rem] text-[#414141] font-normal py-8">
+          </motion.h3>
+          <motion.p
+            whileInView={{
+              x: [50, 0],
+              opacity: [0, 1],
+            }}
+            className="text-[1rem] text-[#414141] font-normal py-8"
+          >
             We are committed to helping individuals and families achieve their
             home ownership goals. With years of experience in the mortgage
             industry, our team provides personalized advice and support to
             ensure you find the right mortgage solution.
-          </p>
+          </motion.p>
         </div>
-        <div className="mt-[7.5rem] grid grid-cols-4 gap-8">
-          <div className="p-3 bg-[#006466] rounded-3xl space-y-9 pb-9">
+        <motion.div
+          variants={container}
+          whileInView="visible"
+          initial="hidden"
+          viewport={{ once: true }}
+          className="mt-[7.5rem] grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
+          <motion.div
+            variants={item}
+            className="p-3 bg-[#006466] rounded-3xl space-y-9 pb-9"
+          >
             <div className="h-16 w-16 rounded-full bg-white" />
             <h4 className="font-bold text-lg text-white uppercase">
               home purchase <br /> loans
@@ -37,8 +62,11 @@ const Features = () => {
                 size={24}
               />
             </Link>
-          </div>
-          <div className="p-3 bg-[#006466] rounded-3xl space-y-9 pb-9">
+          </motion.div>
+          <motion.div
+            variants={item}
+            className="p-3 bg-[#006466] rounded-3xl space-y-9 pb-9"
+          >
             <div className="h-16 w-16 rounded-full bg-white" />
             <h4 className="font-bold text-lg text-white uppercase">
               mortgage <br /> refinancing
@@ -58,8 +86,11 @@ const Features = () => {
                 size={24}
               />
             </Link>
-          </div>
-          <div className="p-3 bg-[#006466] rounded-3xl space-y-9 pb-9">
+          </motion.div>
+          <motion.div
+            variants={item}
+            className="p-3 bg-[#006466] rounded-3xl space-y-9 pb-9"
+          >
             <div className="h-16 w-16 rounded-full bg-white" />
             <h4 className="font-bold text-lg text-white uppercase">
               fixed-rate <br />
@@ -79,8 +110,11 @@ const Features = () => {
                 size={24}
               />
             </Link>
-          </div>
-          <div className="p-3 bg-[#006466] rounded-3xl space-y-9 pb-9">
+          </motion.div>
+          <motion.div
+            variants={item}
+            className="p-3 bg-[#006466] rounded-3xl space-y-9 pb-9"
+          >
             <div className="h-16 w-16 rounded-full bg-white" />
             <h4 className="font-bold text-lg text-white uppercase">
               adjustable-rate mortgages
@@ -100,8 +134,8 @@ const Features = () => {
                 size={24}
               />
             </Link>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

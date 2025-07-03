@@ -2,9 +2,9 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 const About = () => {
   return (
     <section className="py-20 px-4">
-      <div className="container mx-auto max-w-7xl grid gap-8 md:grid-cols-2">
+      <div className="container mx-auto max-w-7xl grid gap-8 lg:grid-cols-2">
         <div className="space-y-4">
-          <h2 className="font-bold text-4xl md:text-5xl text-[#006466] uppercase">
+          <h2 className="font-bold text-3xl lg:text-5xl text-[#006466] uppercase">
             use our loan calculator to estimate your monthly payments and plan
             your budget effectively
           </h2>
