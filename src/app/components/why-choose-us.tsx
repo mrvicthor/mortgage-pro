@@ -14,6 +14,7 @@ const WhyChooseUs = () => {
               width={542}
               height={200}
               className="relative -top-[14rem]"
+              loading="lazy"
             />
           </div>
         </div>
