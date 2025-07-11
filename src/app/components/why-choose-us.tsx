@@ -2,18 +2,17 @@ import Image from "next/image";
 const WhyChooseUs = () => {
   return (
     <section className="py-20 px-4 bg-[#006466]">
-      <div className="grid lg:grid-cols-2 max-w-7xl gap-12 mx-auto">
+      <div className="grid lg:grid-cols-2 max-w-7xl gap-16 mx-auto">
         <div className="space-y-[3.5rem]">
           <h4 className="text-white font-bold uppercase text-5xl">
             why <br /> choose us
           </h4>
-          <div className="h-[20rem] max-w-[33.9375rem] overflow-hidden rounded-3xl mt-[1.625rem]">
+          <div className="h-[20rem] max-w-[34rem] overflow-hidden rounded-3xl mt-[1.625rem] relative">
             <Image
               src="/choose.jpg"
               alt="choose us image"
-              width={542}
-              height={200}
-              className="relative -top-[14rem]"
+              fill
+              className="object-cover"
               loading="lazy"
             />
           </div>
